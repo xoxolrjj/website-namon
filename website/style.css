@@ -1,17 +1,21 @@
+
 *{
     margin: 0;
     padding: 0;
     font-family: sans-serif ;
 }
+
+
 .banner_image{
     width: 100%;
     height: 100vh;
     background-image: linear-gradient(rgba(0,0,0,0.75),rgba(0,0,0,0.75)),url(images/background.jpg);
-    background-size: contain;
+    background-size: cover;
     background-position: center;
     background-attachment:scroll; /* This makes the background image stay fixed while scrolling */
     position: relative;
 }
+
 .navbar{
     width: 85%;
     margin: auto;
@@ -147,6 +151,11 @@ button:hover{
     margin-bottom: 30px;
 }
 
+.team_section h2 {
+    font-size: 40px;
+    margin-bottom: 30;
+}
+
 /* socials */
 .content {
     width: 100%;
@@ -157,14 +166,15 @@ button:hover{
     color: #fff;
     font-family: "Cormorant Garamond", serif;
 }
-
+ 
 .team_section {
     padding: 50px 0;
     text-align: center;
     position: relative;
     color: #fff;
-    background: rgba(0, 0, 0, 0.75); /* Adding a semi-transparent background to ensure readability */
+ /* bakground: rgba(0, 0, 0, 0.75);  Adding a semi-transparent background to ensure readability */
     background-attachment: fixed;
+    background: transparent;
 }
 
 .team_profiles {
@@ -216,8 +226,8 @@ button:hover{
 
 
 /* gallery section*/
-
 .gallery_section {
+    background-image: linear-gradient(rgba(0,0,0,0.75),rgba(0,0,0,0.75)),url(images/background.jpg);
     padding: 50px 0;
     background-color: rgba(255, 255, 255, 0.85); /* Ensures readability */
     text-align: center;
@@ -229,31 +239,54 @@ button:hover{
     margin-bottom: 30px;
 }
 
-.gallery_grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+.gallery_list {
+    list-style-type: none; /* Removes default list styling */
+    margin: 50px;
+    padding: 0; /* Add padding reset */
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center; /* Center-align the items */
     gap: 20px;
-    padding: 20px;
+}
+.gallery_title {
+    font-weight: bold; /* Makes the text bold */
+    text-align: center; /* Centers the text */
+    margin-bottom: 10px; /* Space between the title and the image */
+    color: #000000; /* Matches color with other text */
 }
 
 .gallery_item {
-    background-color: #fff;
+    background-color: rgba(239, 239, 239, 0.3);
     border-radius: 10px;
     padding: 15px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     text-align: center;
+    margin-bottom: 50px; /* Space between items */
+    flex: 0 1 calc(33.333% - 40px); /* Flexible width for responsiveness */
+    display: flex;
+    flex-direction: column; /* Make items stack */
+    align-items: center;
 }
 
 .gallery_item img {
     width: 100%;
+    height: auto;
+    object-fit: cover;
     border-radius: 10px;
-    margin-bottom: 10px;
+    margin-bottom: 3%; /* Space below image */
 }
 
 .gallery_item p {
     font-size: 16px;
-    color: #666;
+    color: #000000;
+    margin: 0;
+    padding: 0 10px;
+    font-weight: bold;
+
+
 }
+
+
 
 
 
