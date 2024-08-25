@@ -1,244 +1,187 @@
-
-*{
+* {
     margin: 0;
     padding: 0;
-    font-family: sans-serif ;
+    font-family: sans-serif;
 }
 
-
-.banner_image{
+.banner_image, .about_us_banner {
     width: 100%;
     height: 100vh;
-    background-image: linear-gradient(rgba(0,0,0,0.75),rgba(0,0,0,0.75)),url(images/background.jpg);
+    background-image: linear-gradient(rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.75)), url(images/background.jpg);
     background-size: cover;
     background-position: center;
-    background-attachment:scroll; /* This makes the background image stay fixed while scrolling */
     position: relative;
 }
 
-.navbar{
-    width: 85%;
-    margin: auto;
-    padding: 35px 0;
+.navbar {
+    width: 100%;
+    padding: 20px 0;
     display: flex;
-    align-items: center;
     justify-content: space-between;
-    position: relative; /* Ensure it is not overlapped by other elements */
-    z-index: 1; /* Make sure navbar is on top of other content */
-    
+    align-items: center;
+    position: absolute;
+    top: 0;
 }
 
-.logo{
+.navbar ul {
+    list-style: none;
+}
+
+.navbar ul li {
+    display: inline-block;
+    margin-right: 30px;
+}
+
+.navbar ul li a {
+    text-decoration: none;
+    color: white;
+    text-transform: uppercase;
+}
+
+.logo {
     width: 120px;
     cursor: pointer;
-
 }
 
-.navbar ul li{
-    list-style: none;
-    display: inline-block;
-    margin: 0 20px;
-    position: relative;
-}
-
-.navbar ul li a{
-    text-decoration: none;
-    color: #fff;
-    text-transform: uppercase;
-    
-  
-    
-}
-
-.navbar ul li ::after{
-    content: '';
-    height: 3px;
-    width: 0;
-    background: #009688;
-    position: absolute;
-    left: 0;
-    bottom: -10px;
-    transition: 0.5s;
-
-}
-
-.navbar ul li a:hover::after{
+.content {
     width: 100%;
-
-}
-
-.content{
-    width: 100%;
+    text-align: center;
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
-    text-align: center;
-    color: #fff;
-    font-family: "Cormorant Garamond", serif;
+    color: white;
 }
 
-.content h1{
-    
-    font-size: 70px;
-    margin: 80px;;
+.content h1 {
+    font-size: 62px;
+    font-weight: 700;
 }
 
 .content p{
-    margin: 20px auto;
+    margin: 30px auto;
     font-weight: 100;
     line-height: 25px;
-
+    font-size: 20px;
+    color: #fff;
+    
 }
 
-button{
+
+button {
     width: 200px;
     padding: 15px 0;
     text-align: center;
     margin: 20px 10px;
     border-radius: 25px;
     font-weight: bold;
-    border: 2px solid #009688 ;;
+    border: 2px solid #009688;
     background: transparent;
-    color: #fff;
+    color: white;
     cursor: pointer;
-    position: relative;
-    overflow: hidden;
+    transition: background 0.5s;
 }
 
-span{
-    background:#009688 ;
-    height: 100%;
-    width: 0;
-    border-radius: 25px;
-    position: absolute;
-    left: 0;
-    bottom: 0;
-    z-index: -1;
-    transition: 0.5s;
-
+button:hover {
+    background: #009688;
+    color: white;
 }
 
-button:hover span{
-    width: 100%;
-}
-button:hover{
-    border: none;
-}
-
-/* about us*/
-
-.about_us_banner {
-    width: 100%;
-    height: 100vh;
-    background-image: linear-gradient(rgba(0,0,0,0.75),rgba(0,0,0,0.75)),url(images/background.jpg);
-    background-size: cover;
-    background-position: center;
-    background-attachment: fixed; /* This makes the background image stay fixed while scrolling */
-    position: relative;
-}
-
-.content p {
-    max-width: 800px;
-    margin: 20px auto;
-    font-weight: 100;
-    line-height: 25px;
-    text-align: center;
-    color: #f1f1f1;
-}
-
-.content h1 {
-    font-size: 50px;
-    margin-bottom: 30px;
-}
-
-.team_section h2 {
-    font-size: 40px;
-    margin-bottom: 30;
-}
-
-/* socials */
-.content {
-    width: 100%;
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    text-align: center;
-    color: #fff;
-    font-family: "Cormorant Garamond", serif;
-}
- 
 .team_section {
-    padding: 50px 0;
+    padding: 300px 0;
     text-align: center;
-    position: relative;
     color: #fff;
- /* bakground: rgba(0, 0, 0, 0.75);  Adding a semi-transparent background to ensure readability */
-    background-attachment: fixed;
-    background: transparent;
 }
-
+.team_section h2 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+}
 .team_profiles {
     display: flex;
     justify-content: center;
-    gap: 40px;
-    flex-wrap: wrap;
+    gap: 2rem;
 }
 
 .profile {
-    background-color: rgba(255, 255, 255, 0.1); /* Transparent background for the profile cards */
+    background-color: rgba(255, 255, 255, 0.1);
     border-radius: 10px;
     padding: 20px;
-    width: 300px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    text-align: center;
+    width: 250px;
 }
 
 .profile_img {
     width: 150px;
     height: 150px;
     border-radius: 50%;
-    margin-bottom: 20px;
+    margin-bottom: 10px;
 }
 
 .profile h3 {
-    font-size: 24px;
-    margin-bottom: 10px;
-    color: #fff;
+    font-size: 1.5rem;
+    margin-bottom: 5px;
 }
 
 .profile p {
-    font-size: 16px;
-    color: #ddd;
-    margin-bottom: 20px;
+    font-size: 1rem;
+    margin-bottom: 10px;
 }
 
 .socials a {
-    text-decoration: none;
     color: #009688;
-    font-weight: bold;
-    margin: 0 10px;
-    transition: color 0.3s ease;
+    text-decoration: none;
+    margin: 0 5px;
+    transition: color 0.3s;
 }
 
 .socials a:hover {
-    color: #004d40;
+    color: #fff;
 }
 
+.contact_us {
+    padding: 200px;
+    color: white;
+    max-width: 800px;
+    margin: 0 auto;
+}
 
-/* gallery section*/
+.contact_us h1 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+}
+.contact_us h2 {
+    font-size: 1.5rem;
+    margin-top: 20px;
+}
+.contact_form {
+    margin: 20px 0;
+}
+
+.contact_form .form_group {
+    margin-bottom: 15px;
+}
+
+.contact_form label {
+    display: block;
+    font-weight: bold;
+}
+
+.contact_form input, .contact_form textarea {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    border-radius: 5px;
+    border: none;
+    font-size: 16px;
+}
+
 .gallery_section {
-    background-image: linear-gradient(rgba(0,0,0,0.75),rgba(0,0,0,0.75)),url(images/background.jpg);
-    padding: 50px 0;
-    background-color: rgba(255, 255, 255, 0.85); /* Ensures readability */
+    padding: 50px;
     text-align: center;
-    color: #666;
+    background-color: #f7f7f7;
 }
-
-.gallery_section h2 {
-    font-size: 40px;
-    margin-bottom: 30px;
+.gallery_section p {
+    font-size: 1.2rem;
+    margin-top: 20px;
 }
-
 .gallery_list {
     list-style-type: none; /* Removes default list styling */
     margin: 50px;
@@ -248,15 +191,10 @@ button:hover{
     justify-content: center; /* Center-align the items */
     gap: 20px;
 }
-.gallery_title {
-    font-weight: bold; /* Makes the text bold */
-    text-align: center; /* Centers the text */
-    margin-bottom: 10px; /* Space between the title and the image */
-    color: #000000; /* Matches color with other text */
-}
+
 
 .gallery_item {
-    background-color: rgba(239, 239, 239, 0.3);
+    background-color: rgba(151, 48, 48, 0.3);
     border-radius: 10px;
     padding: 15px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
@@ -267,98 +205,54 @@ button:hover{
     flex-direction: column; /* Make items stack */
     align-items: center;
 }
-
+ 
 .gallery_item img {
     width: 100%;
-    height: auto;
-    object-fit: cover;
     border-radius: 10px;
-    margin-bottom: 3%; /* Space below image */
 }
 
-.gallery_item p {
-    font-size: 16px;
-    color: #000000;
-    margin: 0;
-    padding: 0 10px;
+.gallery_title {
+    font-size: 1.2rem;
+    margin-bottom: 10px;
     font-weight: bold;
-
-
 }
+ @media (max-width: 768px) {
+    .navbar ul {
+        flex-direction: column;
+        background-color: rgba(0, 0, 0, 0.8);
+        position: absolute;
+        top: 50px;
+        right: 0;
+        width: 100%;
+        height: calc(100vh - 50px);
+        display: none;
+    }
 
+    .navbar ul li {
+        display: block;
+        margin-right: 0;
+        text-align: center;
+        padding: 10px 0;
+    }
 
+    .navbar ul li a {
+        font-size: 18px;
+    }
 
+    .content h1 {
+        font-size: 3rem;
+    }
 
+    .content p {
+        font-size: 1rem;
+    }
 
-/* Contact Us */
+    button {
+        width: 150px;
+        font-size: 0.9rem;
+    }
 
-
-.contact_form {
-    padding: 20px; /* Padding inside the form */
-    margin: 1000px auto 10px auto; /* Margin to push the form down */
-    max-width: 600px; /* Width of the form */
-    box-shadow: none; /* Remove shadow */
-    border: none; /* Remove border */
-    background: none; /* Remove background */
-}
-
-.contact_form h2 {
-    font-size: 20px; /* Font size for the heading */
-    margin-bottom: 15px; /* Margin below the heading */
-    color: #333;
-}
-
-.form_group {
-    margin-bottom: 15px; /* Margin between form elements */
-}
-
-.form_group label {
-    display: block;
-    font-weight: bold;
-    margin-bottom: 5px; /* Margin below the label */
-    font-size: 14px; /* Font size of the label */
-}
-
-.form_group input, .form_group textarea {
-    width: 100%;
-    padding: 10px; /* Padding inside the input fields */
-    border: 1px solid #ddd;
-    border-radius: 5px;
-    font-size: 14px; /* Font size of the input text */
-}
-
-.form_group textarea {
-    resize: vertical;
-}
-
-button {
-    background-color: #009688;
-    color: #fff;
-    border: none;
-    padding: 12px 20px; /* Padding inside the button */
-    font-size: 14px; /* Font size of the button text */
-    border-radius: 25px;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-}
-
-button:hover {
-    background-color: #00796b;
-}
-
-/* Map Container */
-
-
-.map_container {
-    margin: 50px auto 30px auto; /* Increased top margin to push the map further down */
-    max-width: 600px; /* Set a max-width for the container */
-    border: 2px solid #ddd; /* Border around the map */
-    border-radius: 10px; /* Rounded corners for the container */
-    overflow: hidden; /* Ensure the map doesn’t overflow */
-}
-
-.map_container iframe {
-    width: 100%;
-    height: 400px; /* Adjust the height as needed */
-    border: none; /* Remove default border */
+    .team_profiles {
+        flex-direction: column;
+    }
 }
